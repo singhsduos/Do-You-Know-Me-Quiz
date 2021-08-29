@@ -14,8 +14,9 @@ var highScoreArray = [];
 // rules of game
 var rules = "There are some rules. There will be 10 questions";
 var rules1 = "Out of which if you give at least give 7 answers correctly then you are my good friend.";
-var rules2 = "If you not able to give  minimum 7 correct answer then 'then we are not GOOD FRIEND 😂'.";
+var rules2 = "If you not able to give  minimum 7 correct answer then 'we are not GOOD FRIEND 😂'.";
 var rules3 = "Answer will be of one or two words only."
+
 
 // Declare some variable, ready to use
 var right = "Right answer 👍";
@@ -32,6 +33,7 @@ var endLine = chalk.yellowBright("**************************************");
 var userName = readlineSync.question(chalk.blue('What is your name? '));
 console.log(chalk.magentaBright(`Welcome home Mr. ` + chalk.bold.yellowBright(userName.toUpperCase()) + ` to play - Do you know me "Neelesh"? Quiz.`));
 console.log(emptySpace);
+
 
 // Quiz Rules
 console.log(chalk.yellowBright("So let's begin our journey with the quiz!"));
@@ -109,6 +111,7 @@ for (var i = 0; i < questionList.length; i++) {
   var currentQuestion = questionList[i];
   play(currentQuestion.question, currentQuestion.answer);
 }
+
 
 // update playerName with their score in array of object
 highScoreObject.playerName = userName;
